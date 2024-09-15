@@ -78,7 +78,7 @@ model = RandomForestClassifier()
 model.fit(X,y)
 
 ##Apply model for prediction
-prediction = model.predcit(input_row)
+prediction = model.predict(input_row)
 prediction_probs = model.predict_proba(input_row)
 
 
