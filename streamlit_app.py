@@ -85,7 +85,7 @@ df_prediction_probs = pd.DataFrame(prediciton_probs)
 df_prediction_probs.columns = ["Adelie", "Chinstarp", "Gentoo"]
 df_prediction_probs.rename(columns = {0:'Adelie',
                                    1:'Chinstrap',
-                                   2:'Gentoo'}
+                                   2:'Gentoo'})
 
 df_prediction_probs
 
