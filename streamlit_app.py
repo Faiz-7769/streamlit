@@ -92,7 +92,28 @@ df_prediction_probs.rename(columns = {0:'Adelie',
 
 #display species
 st.subheader('Predicted Species')
-df_prediction_probs
+st.dataframe(df_prediction_probs,column_config={
+        "Adelie": st.column_config.ProgressColumn(
+            "Adelie",
+            format="$%f",
+            min_value=0,
+            max_value=1
+        ),
+        "Chinstrap": st.column_config.ProgressColumn(
+            "Chinstrap",
+            format="$%f",
+            min_value=0,
+            max_value=1
+        ),
+        "Gentoo": st.column_config.ProgressColumn(
+            "Gentoo",
+            format="$%f",
+            min_value=0,
+            max_value=1
+        )
+    }, hide_index = True)
+
+
 penguins_species = np.array(['Adelie', 'Chinstrap', 'Gentoo'])
 st.success(str(penguins_species[prediction[0]]))
 
